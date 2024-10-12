@@ -1,0 +1,39 @@
+{
+  "name": "app-shell-test-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && npx local-web-server -p 9090 -d ./dist --spa index.html",
+    "clean": "rimraf dist",
+    "build": "npm run clean && cross-env NODE_ENV=production node build.mjs",
+    "develop": "npm run clean && cross-env node build.mjs",
+    "lint": "eslint --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.24.0",
+    "esbuild-plugin-copy": "^2.1.1",
+    "eslint": "^9.12.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.37.1",
+    "express": "^4.21.1",
+    "globals": "^15.11.0",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "serve-index": "^1.9.1",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.8.1",
+    "ws": "^8.18.0"
+  },
+  "dependencies": {
+    "@fluentui/web-components": "^2.6.1",
+    "lit": "^3.2.1",
+    "single-spa": "^6.0.3"
+  }
+}
